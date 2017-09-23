@@ -40,7 +40,7 @@ def upload():
 def upload_image():
     file_obj = request.files['file']
     filename = file_obj.filename
-    if filename[-3:] == 'png':
+    if filename[-3:] == 'jpg' or filename[-3:] == 'png':
         file_obj.save('./images/fish.png')
     else:
         return '失敗しました', 400
